@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartContainer = document.getElementById('cart-container');
     const cartItemsContainer = document.getElementById('cart-items');
     const showCartBtn = document.getElementById('show-cart-btn');
+    const removeLastItemBtn = document.getElementById('remove-last-item-btn');
 
     const apiKey = 'f258bb1e6010a0d086b7dfeaf5e2158f';
     const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=es`;
@@ -89,5 +90,17 @@ document.addEventListener('DOMContentLoaded', () => {
         cartContainer.classList.toggle('visible');
         const buttonText = cartContainer.classList.contains('visible') ? 'Ocultar Carrito' : 'Ver Carrito';
         showCartBtn.innerText = buttonText;
+    }
+
+    removeLastItemBtn.addEventListener('click', removeLastCartItem);
+
+    function removeLastCartItem() {
+        if (cartArray.length > 0) {
+            const lastItem = cartArray.pop();
+            alert(`Se eliminó la última película del carrito: ${lastItem.title}`);
+            updateCartUI();
+        } else {
+            alert('El carrito está vacío');
+        }
     }
 });
