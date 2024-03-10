@@ -3,6 +3,9 @@ body {
     margin: 20px;
     background: rgb(33, 0, 70);
     background: linear-gradient(90deg, rgba(33, 0, 70, 1) 0%, rgba(76, 0, 163, 1) 50%, rgba(33, 0, 70, 1) 100%);
+    text-align: center;
+    text-shadow: 0px 0px 10px black;
+    color: blanchedalmond;
 }
 
 #movie-list {
@@ -38,18 +41,17 @@ body {
 #cart-container.visible {
     display: block;
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
     width: 300px;
-    background-color: #fff;
-    box-shadow: -3px 0 5px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    transition: transform 0.3s ease-out;
     opacity: 1;
+    background: rgb(33, 0, 70);
+    background: linear-gradient(90deg, rgba(33, 0, 70, 1) 0%, rgba(76, 0, 163, 1) 50%, rgba(33, 0, 70, 1) 100%);
+    border-radius: 20px;
+    margin: 3% 1%;
+    box-shadow: 0px 0px 10px 0px white;
 }
 
 #cart-container.visible h2 {
     margin-top: 10px;
-    text-align: center;
+    background: rgb(33, 0, 70);
+    background: linear-gradient(90deg, rgba(33, 0, 70, 1) 0%, rgba(76, 0, 163, 1) 50%, rgba(33, 0, 70, 1) 100%);
 }

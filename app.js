@@ -87,5 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function toggleCartVisibility() {
         cartContainer.classList.toggle('visible');
+        const buttonText = cartContainer.classList.contains('visible') ? 'Ocultar Carrito' : 'Ver Carrito';
+        showCartBtn.innerText = buttonText;
     }
 });
