@@ -1,11 +1,15 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background: rgb(33, 0, 70);
+    background: linear-gradient(90deg, rgba(33, 0, 70, 1) 0%, rgba(76, 0, 163, 1) 50%, rgba(33, 0, 70, 1) 100%);
 }
 
 #movie-list {
     display: flex;
     flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
 }
 
 .movie {
@@ -13,10 +17,39 @@ body {
     padding: 10px;
     margin: 10px;
     width: 200px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
 }
 
 #cart-container {
-    margin-top: 20px;
-    border: 1px solid #ccc;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    background-color: #fff;
     padding: 10px;
+    border: 1px solid #ccc;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+#cart-container.visible {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: -3px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    transition: transform 0.3s ease-out;
+    opacity: 1;
+}
+
+#cart-container.visible h2 {
+    margin-top: 10px;
+    text-align: center;
 }
